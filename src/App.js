@@ -9,20 +9,24 @@ import "./components/style.css";
 import SideBar from "./components/leftSideBar";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState(1);
+  const config = {...db, user, setUser};
   return (
     <Router>
-      <SideBar />
+      {user}
+      <SideBar {...config} />
       <Switch>
         <Route exact path="/">
-          <Home {...db} />
+          <Home {...config} />
         </Route>
         <Route path="/liked">
-          <Liked {...db} />
+          <Liked {...config} />
         </Route>
         <Route path="/play/:id">
-          <PlayVideo {...db} />
+          <PlayVideo {...config} />
         </Route>
       </Switch>
     </Router>
