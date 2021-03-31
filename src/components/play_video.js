@@ -6,7 +6,9 @@ import { Container, Row } from "react-bootstrap";
 const PlayVideo = (props) => {
   let match = useRouteMatch();
   const id = match?.params?.id;
-  const [data] = props.all_videos.filter((val) => val.id == id);
+  const [data] = props.all_videos.filter(
+    (val) => parseInt(val.id) === parseInt(id)
+  );
   return (
     <Container>
       <Row>

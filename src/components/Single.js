@@ -1,12 +1,12 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import React from "react";
+import { Col, Row } from "react-bootstrap";
 
-export default function Single({val}) {
+export default function Single({ val }) {
   return (
     <Col xs="4">
       <a href={"/play/" + val.id}>
         <Row>
-          <img src={val.image} />
+          <img alt="youtube" src={val.image} />
         </Row>
         <Row>{val.title}</Row>
       </a>
