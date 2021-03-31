@@ -5,7 +5,6 @@ const SideBar = () => {
     <div class="sidenav">
       <Link to="/">Home</Link>
       <Link to="/liked">Liked</Link>
-      <Link to="/play">Play</Link>
     </div>
   );
 };
