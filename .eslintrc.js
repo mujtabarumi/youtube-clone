@@ -16,7 +16,6 @@ module.exports = {
   plugins: [],
   rules: {
     'linebreak-style': 0,
-    'prettier/prettier': ['error', { singleQuote: true, parser: 'flow' }],
     'no-console': 'off',
   },
 };
