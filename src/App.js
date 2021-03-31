@@ -16,7 +16,6 @@ function App() {
   const config = {...db, user, setUser};
   return (
     <Router>
-      {user}
       <SideBar {...config} />
       <Switch>
         <Route exact path="/">
