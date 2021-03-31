@@ -17,7 +17,7 @@ function App() {
         <Route path="/liked">
           <Liked {...db} />
         </Route>
-        <Route path="/play">
+        <Route path="/play/:id">
           <PlayVideo {...db} />
         </Route>
       </Switch>
