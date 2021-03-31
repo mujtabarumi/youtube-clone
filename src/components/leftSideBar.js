@@ -14,7 +14,6 @@ const SideBar = (props) => {
     <div class="sidenav">
       <Link to="/">Home</Link>
       <Link to="/liked">Liked</Link>
-      <Link to="/play">Play</Link>
       <select multiple onChange={onChange}>
         {options}
       </select>
