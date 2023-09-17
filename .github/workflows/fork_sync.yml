@@ -1,0 +1,30 @@
+name: Sync Fork
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config user.email "mujtaba.rumi1@gmail.com"
+          git config user.name "mujtabarumi"
+
+      - name: Fetch Fork
+        run: |
+          git remote add upstream https://github.com/FormBold/formbold-site-nextjs.git
+          git fetch upstream
+          git checkout staging
+          git merge upstream/staging
+
+      - name: Push Changes
+        run: |
+          git push origin staging
